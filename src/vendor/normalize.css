@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -75,7 +75,12 @@ pre {
 
 a {
   background-color: transparent;
+  color: #f7931a;
+  text-decoration: none;
 }
+ a:hover {
+  text-decoration:underline
+ }
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -174,7 +179,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -184,7 +190,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 

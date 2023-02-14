@@ -1,0 +1,9 @@
+.logo {
+    background-image: url(../../images/logo.jpg);
+    width: 140px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    background-color: #F7931A;
+}

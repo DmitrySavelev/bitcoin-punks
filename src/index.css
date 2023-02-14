@@ -1,10 +1,34 @@
-/* @import url(./vendor/normalize.css);
+@import url(./vendor/normalize.css);
 @import url(./vendor/fonts.css);
 
-@import url(./blocks/page/page.css); */
+@import url(./blocks/page/page.css);
 /* header */
-/* @import url(./blocks/header/header.css);
-@import url(./blocks/header/__logo/header__logo.css); */
+@import url(./blocks/Header/Header.css);
+@import url(./blocks/title/title.css);
+@import url(./blocks/logo/logo.css);
+@import url(./blocks/discord-icon/discord-icon.css);
+@import url(./blocks/twitter-icon/twitter-icon.css);
+@import url(./blocks/socials/socials.css);
+@import url(./blocks/header-column/header-column.css);
+@import url(./blocks/desc/desc.css);
+@import url(./blocks/minted/minted.css);
+
+@import url(./blocks/Article/Article.css);
+@import url(./blocks/paragraph/paragraph.css);
+
+@import url(./blocks/Confirmation/Confirmation.css);
+@import url(./blocks/Panel/Panel.css);
+@import url(./blocks/panel-row/panel-row.css);
+
+
+
+
+@import url(./blocks/Cards/Cards.css);
+@import url(./blocks/info-image/info-image.css);
+
+
+
+
 /* profile */
 /* @import url(./blocks/content/content.css);
 @import url(./blocks/profile/profile.css);

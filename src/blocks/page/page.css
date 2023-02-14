@@ -1,11 +1,10 @@
 .page {
-  font-family: Inter, Arial, sans-serif, "Times New Roman", Times, serif;
+  font-family: Roboto, Inter, Arial, sans-serif, "Times New Roman", Times, serif;
   box-sizing: border-box;
-  min-width: 320px;
   min-height: 100vh;
-  background-color: #000;
+  background-color: #242424;
   margin: auto;
-  color: #fff;
+  color: #B5B5B5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;

@@ -1,21 +1,5 @@
 @font-face {
-  font-family: "Inter";
-  src: local("Inter-Regular"),
-    url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-family: neon;
+  src: url("../fonts/NeonLights-22d.ttf");
   font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: local("Inter-Medium"), url("../fonts/Inter-Medium.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: local("Inter-Black"), url("../fonts/Inter-Black.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 900;
 }

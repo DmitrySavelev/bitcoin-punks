@@ -1,4 +1,7 @@
 .title {
     margin: 17px 0;
     font-size: 42px;
+    font-family: neon;
+    color: #15F274;
+    max-width: 312px;
 }

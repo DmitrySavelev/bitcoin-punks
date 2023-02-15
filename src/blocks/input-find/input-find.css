@@ -1,0 +1,14 @@
+.input-find {
+  margin-left: 21px; 
+  margin-right: 12px;
+  background-color: #3A3A3A;
+  border: none;
+  height: 28px;
+  width: 182px;
+  border-radius: 4px;
+  text-align: center;
+}
+.input-find:focus {
+  background-color: #392F23;
+  outline: none;
+}

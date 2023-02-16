@@ -1,0 +1,9 @@
+.popup__text_value {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup__text_value > span:first-child {
+  color: #fff;
+}

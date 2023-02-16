@@ -1,0 +1,7 @@
+.card-wrapper {
+  position: relative;
+}
+
+.card-wrapper:hover .block {
+  display: block;
+}

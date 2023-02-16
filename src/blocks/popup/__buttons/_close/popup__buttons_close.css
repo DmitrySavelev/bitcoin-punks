@@ -1,0 +1,16 @@
+.popup__buttons_close {
+  height: 35px;
+  border: 1px solid #5e5e63;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #2c2c32;
+  color: #d9d9da;
+  font-size: 13px;
+  transition: all .3s;
+
+}
+.popup__buttons_close:hover {
+  border: 1px solid #D1780D;
+  color: #D1780D;
+}

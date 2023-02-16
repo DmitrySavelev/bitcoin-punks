@@ -1,71 +1,138 @@
+import Card from "./Card";
+
 const data = [
-  { id: 1, name: "Spidy", src: "../images/Bapes1.jpg" },
-  { id: 2, name: "Spidy", src: "../images/Bapes2.jpg" },
-  { id: 3, name: "Spidy", src: "../images/Bapes3.jpg" },
-  { id: 4, name: "Spidy", src: "../images/Bapes4.jpg" },
-  { id: 5, name: "Spidy", src: "../images/Bapes5.jpg" },
-  { id: 6, name: "Spidy", src: "../images/Bapes6.jpg" },
+  { id: 1, src: "./images/Bapes1.jpg" },
+  { id: 2, src: "./images/Bapes2.jpg" },
+  { id: 3, src: "./images/Bapes3.jpg" },
+  { id: 4, src: "./images/Bapes4.jpg" },
+  { id: 5, src: "./images/Bapes5.jpg" },
+  { id: 6, src: "./images/Bapes6.jpg" },
+  { id: 7, src: "./images/Bapes6.jpg" },
+  { id: 8, src: "./images/Bapes6.jpg" },
+  { id: 9, src: "./images/Bapes6.jpg" },
+  { id: 10, src: "./images/Bapes6.jpg" },
+  { id: 11, src: "./images/Bapes1.jpg" },
+  { id: 12, src: "./images/Bapes2.jpg" },
+  { id: 13, src: "./images/Bapes3.jpg" },
+  { id: 14, src: "./images/Bapes4.jpg" },
+  { id: 15, src: "./images/Bapes5.jpg" },
+  { id: 16, src: "./images/Bapes6.jpg" },
+  { id: 17, src: "./images/Bapes6.jpg" },
+  { id: 18, src: "./images/Bapes6.jpg" },
+  { id: 19, src: "./images/Bapes6.jpg" },
+  { id: 20, src: "./images/Bapes6.jpg" },
+  { id: 21, src: "./images/Bapes1.jpg" },
+  { id: 22, src: "./images/Bapes2.jpg" },
+  { id: 23, src: "./images/Bapes3.jpg" },
+  { id: 24, src: "./images/Bapes4.jpg" },
+  { id: 25, src: "./images/Bapes5.jpg" },
+  { id: 26, src: "./images/Bapes6.jpg" },
+  { id: 27, src: "./images/Bapes6.jpg" },
+  { id: 28, src: "./images/Bapes6.jpg" },
+  { id: 29, src: "./images/Bapes6.jpg" },
+  { id: 30, src: "./images/Bapes6.jpg" },
+  { id: 1, src: "./images/Bapes1.jpg" },
+  { id: 2, src: "./images/Bapes2.jpg" },
+  { id: 3, src: "./images/Bapes3.jpg" },
+  { id: 4, src: "./images/Bapes4.jpg" },
+  { id: 5, src: "./images/Bapes5.jpg" },
+  { id: 6, src: "./images/Bapes6.jpg" },
+  { id: 7, src: "./images/Bapes6.jpg" },
+  { id: 8, src: "./images/Bapes6.jpg" },
+  { id: 9, src: "./images/Bapes6.jpg" },
+  { id: 10, src: "./images/Bapes6.jpg" },
+  { id: 11, src: "./images/Bapes1.jpg" },
+  { id: 12, src: "./images/Bapes2.jpg" },
+  { id: 13, src: "./images/Bapes3.jpg" },
+  { id: 14, src: "./images/Bapes4.jpg" },
+  { id: 15, src: "./images/Bapes5.jpg" },
+  { id: 16, src: "./images/Bapes6.jpg" },
+  { id: 17, src: "./images/Bapes6.jpg" },
+  { id: 18, src: "./images/Bapes6.jpg" },
+  { id: 19, src: "./images/Bapes6.jpg" },
+  { id: 20, src: "./images/Bapes6.jpg" },
+  { id: 21, src: "./images/Bapes1.jpg" },
+  { id: 22, src: "./images/Bapes2.jpg" },
+  { id: 23, src: "./images/Bapes3.jpg" },
+  { id: 24, src: "./images/Bapes4.jpg" },
+  { id: 25, src: "./images/Bapes5.jpg" },
+  { id: 26, src: "./images/Bapes6.jpg" },
+  { id: 27, src: "./images/Bapes6.jpg" },
+  { id: 28, src: "./images/Bapes6.jpg" },
+  { id: 29, src: "./images/Bapes6.jpg" },
+  { id: 30, src: "./images/Bapes6.jpg" },
+  { id: 1, src: "./images/Bapes1.jpg" },
+  { id: 2, src: "./images/Bapes2.jpg" },
+  { id: 3, src: "./images/Bapes3.jpg" },
+  { id: 4, src: "./images/Bapes4.jpg" },
+  { id: 5, src: "./images/Bapes5.jpg" },
+  { id: 6, src: "./images/Bapes6.jpg" },
+  { id: 7, src: "./images/Bapes6.jpg" },
+  { id: 8, src: "./images/Bapes6.jpg" },
+  { id: 9, src: "./images/Bapes6.jpg" },
+  { id: 10, src: "./images/Bapes6.jpg" },
+  { id: 11, src: "./images/Bapes1.jpg" },
+  { id: 12, src: "./images/Bapes2.jpg" },
+  { id: 13, src: "./images/Bapes3.jpg" },
+  { id: 14, src: "./images/Bapes4.jpg" },
+  { id: 15, src: "./images/Bapes5.jpg" },
+  { id: 16, src: "./images/Bapes6.jpg" },
+  { id: 17, src: "./images/Bapes6.jpg" },
+  { id: 18, src: "./images/Bapes6.jpg" },
+  { id: 19, src: "./images/Bapes6.jpg" },
+  { id: 20, src: "./images/Bapes6.jpg" },
+  { id: 21, src: "./images/Bapes1.jpg" },
+  { id: 22, src: "./images/Bapes2.jpg" },
+  { id: 23, src: "./images/Bapes3.jpg" },
+  { id: 24, src: "./images/Bapes4.jpg" },
+  { id: 25, src: "./images/Bapes5.jpg" },
+  { id: 26, src: "./images/Bapes6.jpg" },
+  { id: 27, src: "./images/Bapes6.jpg" },
+  { id: 28, src: "./images/Bapes6.jpg" },
+  { id: 29, src: "./images/Bapes6.jpg" },
+  { id: 30, src: "./images/Bapes6.jpg" },
+  { id: 1, src: "./images/Bapes1.jpg" },
+  { id: 2, src: "./images/Bapes2.jpg" },
+  { id: 3, src: "./images/Bapes3.jpg" },
+  { id: 4, src: "./images/Bapes4.jpg" },
+  { id: 5, src: "./images/Bapes5.jpg" },
+  { id: 6, src: "./images/Bapes6.jpg" },
+  { id: 7, src: "./images/Bapes6.jpg" },
+  { id: 8, src: "./images/Bapes6.jpg" },
+  { id: 9, src: "./images/Bapes6.jpg" },
+  { id: 10, src: "./images/Bapes6.jpg" },
+  { id: 11, src: "./images/Bapes1.jpg" },
+  { id: 12, src: "./images/Bapes2.jpg" },
+  { id: 13, src: "./images/Bapes3.jpg" },
+  { id: 14, src: "./images/Bapes4.jpg" },
+  { id: 15, src: "./images/Bapes5.jpg" },
+  { id: 16, src: "./images/Bapes6.jpg" },
+  { id: 17, src: "./images/Bapes6.jpg" },
+  { id: 18, src: "./images/Bapes6.jpg" },
+  { id: 19, src: "./images/Bapes6.jpg" },
+  { id: 20, src: "./images/Bapes6.jpg" },
+  { id: 21, src: "./images/Bapes1.jpg" },
+  { id: 22, src: "./images/Bapes2.jpg" },
+  { id: 23, src: "./images/Bapes3.jpg" },
+  { id: 24, src: "./images/Bapes4.jpg" },
+  { id: 25, src: "./images/Bapes5.jpg" },
+  { id: 26, src: "./images/Bapes6.jpg" },
+  { id: 27, src: "./images/Bapes6.jpg" },
+  { id: 28, src: "./images/Bapes6.jpg" },
+  { id: 29, src: "./images/Bapes6.jpg" },
+  { id: 30, src: "./images/Bapes6.jpg" },
 ];
-let img = "../images/Bapes1.jpg";
+
 function Cards() {
   return (
     <div className="Cards">
       <div className="Cards-wrapper">
-        <img className="card" src={require("../images/Bapes1.jpg")} />
-        <img className="card" src={require("../images/Bapes2.jpg")} />
-        <img className="card" src={require("../images/Bapes3.jpg")} />
-        <img className="card" src={require("../images/Bapes4.jpg")} />
-        <img className="card" src={require("../images/Bapes5.jpg")} />
-        <img className="card" src={require("../images/Bapes6.jpg")} />
-        <img className="card" src={require("../images/Bapes1.jpg")} />
-        <img className="card" src={require("../images/Bapes2.jpg")} />
-        <img className="card" src={require("../images/Bapes3.jpg")} />
-        <img className="card" src={require("../images/Bapes4.jpg")} />
-        <img className="card" src={require("../images/Bapes5.jpg")} />
-        <img className="card" src={require("../images/Bapes6.jpg")} />
-        <img className="card" src={require("../images/Bapes1.jpg")} />
-        <img className="card" src={require("../images/Bapes2.jpg")} />
-        <img className="card" src={require("../images/Bapes3.jpg")} />
-        <img className="card" src={require("../images/Bapes4.jpg")} />
-        <img className="card" src={require("../images/Bapes5.jpg")} />
-        <img className="card" src={require("../images/Bapes6.jpg")} />
-        <img className="card" src={require("../images/Bapes1.jpg")} />
-        <img className="card" src={require("../images/Bapes2.jpg")} />
-        <img className="card" src={require("../images/Bapes3.jpg")} />
-        <img className="card" src={require("../images/Bapes4.jpg")} />
-        <img className="card" src={require("../images/Bapes5.jpg")} />
-        <img className="card" src={require("../images/Bapes6.jpg")} />
-        <img className="card" src={require("../images/Bapes1.jpg")} />
-        <img className="card" src={require("../images/Bapes2.jpg")} />
-        <img className="card" src={require("../images/Bapes3.jpg")} />
-        <img className="card" src={require("../images/Bapes4.jpg")} />
-        <img className="card" src={require("../images/Bapes5.jpg")} />
-        <img className="card" src={require("../images/Bapes6.jpg")} />
-        <img className="card" src={require("../images/Bapes1.jpg")} />
-        <img className="card" src={require("../images/Bapes2.jpg")} />
-        <img className="card" src={require("../images/Bapes3.jpg")} />
-        <img className="card" src={require("../images/Bapes4.jpg")} />
-        <img className="card" src={require("../images/Bapes5.jpg")} />
-        <img className="card" src={require("../images/Bapes6.jpg")} />
-        <img className="card" src={require("../images/Bapes1.jpg")} />
-        <img className="card" src={require("../images/Bapes2.jpg")} />
-        <img className="card" src={require("../images/Bapes3.jpg")} />
-        <img className="card" src={require("../images/Bapes4.jpg")} />
-        <img className="card" src={require("../images/Bapes5.jpg")} />
-        <img className="card" src={require("../images/Bapes6.jpg")} />
+        {data.map((card) => (
+          <Card key={card.id} src={card.src} id={card.id} />
+        ))}
       </div>
       <button className="load-cards">Load more</button>
     </div>
   );
 }
-
 export default Cards;
-
-{
-  /* <div className="card" style={{ backgroundImage: `url(${data[0].src})` }} /> */
-}
-{
-  /* {data.map((card) => (
-       
-      ))} */
-}

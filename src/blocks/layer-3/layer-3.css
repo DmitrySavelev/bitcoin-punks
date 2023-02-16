@@ -1,0 +1,13 @@
+.layer-3 {
+  height: 20px;
+  width: 100%;
+  background: rgba(107, 60, 3, 0.9);
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.layer-3 a {
+  color: #fff;
+  font-size: 12px;
+}

@@ -1,0 +1,13 @@
+.popup__buttons_report {
+  height: 35px;
+  background-color: #e88080;
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.popup__buttons_report:hover {
+  background-color: #e98b8b;
+  text-decoration: underline;
+  text-decoration-color: #f7931a;
+}

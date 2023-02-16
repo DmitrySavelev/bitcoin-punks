@@ -13,8 +13,8 @@
 @import url(./blocks/desc/desc.css);
 
 @import url(./blocks/minted-row/minted-row.css);
-@import url(./blocks/minted/minted.css); 
-@import url(./blocks/check-listings/check-listings.css); 
+@import url(./blocks/minted/minted.css);
+@import url(./blocks/check-listings/check-listings.css);
 
 @import url(./blocks/Article/Article.css);
 @import url(./blocks/paragraph/paragraph.css);
@@ -33,9 +33,36 @@
 @import url(./blocks/showsIDs/showsIDs.css);
 @import url(./blocks/info-image/info-image.css);
 
-
 /* Cards */
 @import url(./blocks/Cards/Cards.css);
 @import url(./blocks/Cards-wrapper/Cards-wrapper.css);
 @import url(./blocks/card/card.css);
 @import url(./blocks/load-cards/load-cards.css);
+
+/* Card */
+@import url(./blocks/card-wrapper/card-wrapper.css);
+@import url(./blocks/block/block.css);
+@import url(./blocks/layer-1/layer-1.css);
+@import url(./blocks/layer-2/layer-2.css);
+@import url(./blocks/layer-3/layer-3.css);
+
+/* InfoPopup */
+@import url(./blocks/InfoPopup/InfoPopup.css);
+@import url(./blocks/popup/__container-info/popup__container-info.css);
+@import url(./blocks/popup/__number/popup__number.css);
+@import url(./blocks/popup/__row/popup__row.css);
+@import url(./blocks/popup/__buttons/popup__buttons.css);
+@import url(./blocks/popup/__buttons/_report/popup__buttons_report.css);
+@import url(./blocks/popup/__buttons/_close/popup__buttons_close.css);
+
+@import url(./blocks/popup/__content/popup__content.css);
+@import url(./blocks/popup/__image/popup__image.css);
+@import url(./blocks/popup/__text-info/popup__text-info.css);
+@import url(./blocks/popup/__text-info/_minted/popup__text-info_minted.css);
+@import url(./blocks/popup/__text-info/_value/popup__text-info_value.css);
+@import url(./blocks/popup/__text-info/_missed/popup__text-info_missed.css);
+@import url(./blocks/popup/__text-info/_end/popup__text-info_end.css);
+@import url(./blocks/popup/__figure/popup__figure.css);
+@import url(./blocks/popup/__figure/_circle/popup__figure_circle.css);
+@import url(./blocks/popup/__figure/_vertical-line/popup__figure_vertical-line.css);
+

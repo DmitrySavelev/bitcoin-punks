@@ -7,10 +7,10 @@
   background-color: #2c2c32;
   color: #d9d9da;
   font-size: 13px;
-  transition: all .3s;
-
+  cursor: pointer;
+  transition: all 0.3s;
 }
 .popup__buttons_close:hover {
-  border: 1px solid #D1780D;
-  color: #D1780D;
+  border: 1px solid #d1780d;
+  color: #d1780d;
 }

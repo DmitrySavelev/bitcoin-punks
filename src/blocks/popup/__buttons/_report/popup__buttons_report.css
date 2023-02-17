@@ -5,6 +5,7 @@
   border-radius: 5px;
   padding-left: 15px;
   padding-right: 15px;
+  cursor: pointer;
 }
 .popup__buttons_report:hover {
   background-color: #e98b8b;

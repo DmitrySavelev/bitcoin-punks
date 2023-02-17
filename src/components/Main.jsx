@@ -4,13 +4,13 @@ import Confirmation from "./Confirmation";
 import Panel from "./Panel";
 
 
-function Main() {
+function Main(props) {
   return (
     <div className="Main">
       < Article/>
       < Confirmation/>
       < Panel/>
-      < Cards/>
+      < Cards onInfo={props.onInfo}/>
     </div>
   );
 }

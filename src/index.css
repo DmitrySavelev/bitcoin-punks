@@ -48,6 +48,7 @@
 
 /* InfoPopup */
 @import url(./blocks/InfoPopup/InfoPopup.css);
+@import url(./blocks/popup/_opened/popup_opened.css);
 @import url(./blocks/popup/__container-info/popup__container-info.css);
 @import url(./blocks/popup/__number/popup__number.css);
 @import url(./blocks/popup/__row/popup__row.css);
@@ -64,5 +65,6 @@
 @import url(./blocks/popup/__text-info/_end/popup__text-info_end.css);
 @import url(./blocks/popup/__figure/popup__figure.css);
 @import url(./blocks/popup/__figure/_circle/popup__figure_circle.css);
+@import url(./blocks/popup/__figure/_circle/_first/popup__figure_circle_first.css);
 @import url(./blocks/popup/__figure/_vertical-line/popup__figure_vertical-line.css);
 

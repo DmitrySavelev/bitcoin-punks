@@ -22,12 +22,14 @@
 @import url(./blocks/Confirmation/Confirmation.css);
 @import url(./blocks/Panel/Panel.css);
 @import url(./blocks/panel-row/panel-row.css);
+@import url(./blocks/panel-row_center/panel-row_center.css);
 @import url(./blocks/view-punks/view-punks.css);
 @import url(./blocks/btn/btn.css);
 @import url(./blocks/btn-1/btn-1.css);
 @import url(./blocks/btn-2/btn-2.css);
 @import url(./blocks/btn-3/btn-3.css);
 @import url(./blocks/finder/finder.css);
+@import url(./blocks/finder/_hide/finder_hide.css);
 @import url(./blocks/go/go.css);
 @import url(./blocks/input-find/input-find.css);
 @import url(./blocks/showsIDs/showsIDs.css);
@@ -35,16 +37,24 @@
 
 /* Cards */
 @import url(./blocks/Cards/Cards.css);
+@import url(./blocks/_clean/Cards_clean.css);
 @import url(./blocks/Cards-wrapper/Cards-wrapper.css);
 @import url(./blocks/card/card.css);
 @import url(./blocks/load-cards/load-cards.css);
+
+/* FoundCard */
+@import url(./blocks/found-card.css);
+@import url(./blocks/found-card/__button/found-card__button.css);
 
 /* Card */
 @import url(./blocks/card-wrapper/card-wrapper.css);
 @import url(./blocks/block/block.css);
 @import url(./blocks/layer-1/layer-1.css);
+@import url(./blocks/layer-1/_showed/layer-1_showed.css);
 @import url(./blocks/layer-2/layer-2.css);
+@import url(./blocks/layer-2/_showed/layer-2_showed.css);
 @import url(./blocks/layer-3/layer-3.css);
+@import url(./blocks/layer-3/_showed/layer-3_showed.css);
 
 /* InfoPopup */
 @import url(./blocks/InfoPopup/InfoPopup.css);
@@ -67,4 +77,3 @@
 @import url(./blocks/popup/__figure/_circle/popup__figure_circle.css);
 @import url(./blocks/popup/__figure/_circle/_first/popup__figure_circle_first.css);
 @import url(./blocks/popup/__figure/_vertical-line/popup__figure_vertical-line.css);
-

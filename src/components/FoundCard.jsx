@@ -103,28 +103,21 @@ const data = [
   { id: 100, src: "./images/Bapes6.jpg" },
 ];
 
-function Cards(props) {
+function FoundCard(props) {
   return (
-    <div>
-      <div className={props.isVisible ? "Cards" : "Cards_clean"}>
-        <div className="Cards-wrapper">
-          {data.map((card) => (
-            <Card 
-              key={card.id}
-              src={card.src}
-              id={card.id}
-              onInfo={props.onInfo}
-              number={props.number}
-              minted={props.minted}
-              hashes={props.hashes}
-              isVisible={props.isVisible}
-              isShowIDs={props.isShowIDs}
-            />
-          ))}
-        </div>
-        <button className="load-cards">Load more</button>
-      </div>
+    <div className="found-card">
+      <Card
+        key={data[0].id}
+        src={data[0].src}
+        findNumber={props.findNumber}
+        // id={card.id}
+        // onInfo={props.onInfo}
+        // number={props.number}
+        // minted={props.minted}
+        // hashes={props.hashes}
+      />
+      <button className="found-card__button" onClick={props.handleFind}>Clear Filter</button>
     </div>
   );
 }
-export default Cards;
+export default FoundCard;

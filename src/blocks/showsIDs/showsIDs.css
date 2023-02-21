@@ -1,3 +1,6 @@
 .showsIDs {
-    margin-right: 9px;
+  margin-right: 9px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
 }

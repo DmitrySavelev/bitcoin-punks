@@ -1,4 +1,5 @@
 .Panel {
+  display: flex;
   width: 900px;
   margin: 0 auto;
   display: flex;

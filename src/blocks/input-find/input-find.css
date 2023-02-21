@@ -1,14 +1,17 @@
 .input-find {
-  margin-left: 21px; 
+  margin-left: 21px;
   margin-right: 12px;
-  background-color: #3A3A3A;
+  background-color: #3a3a3a;
   border: none;
   height: 28px;
   width: 182px;
   border-radius: 4px;
   text-align: center;
+  color: #dbdbdb;
+  transition: all 0.3s;
 }
+
 .input-find:focus {
-  background-color: #392F23;
+  background-color: #392f23;
   outline: none;
 }

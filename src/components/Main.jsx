@@ -15,6 +15,12 @@ function Main(props) {
         setNumber={props.setNumber}
         setIsShowIDs={props.setIsShowIDs}
         isShowIDs={props.isShowIDs}
+        isSortByRandom={props.isSortByRandom}
+        setIsSortByRandom={props.setIsSortByRandom}
+        isSortByID={props.isSortByID}
+        setIsSortByID={props.setIsSortByID}
+        isSortByRecentMint={props.isSortByRecentMint}
+        setIsSortByRecentMint={props.setIsSortByRecentMint}
       />
       {props.isVisible ? (
         <Cards
@@ -24,9 +30,18 @@ function Main(props) {
           hashes={props.hashes}
           isVisible={props.isVisible}
           isShowIDs={props.isShowIDs}
+          isSortByRandom={props.isSortByRandom}
+          setIsSortByRandom={props.setIsSortByRandom}
+          isSortByID={props.isSortByID}
+          setIsSortByID={props.setIsSortByID}
+          isSortByRecentMint={props.isSortByRecentMint}
+          setIsSortByRecentMint={props.setIsSortByRecentMint}
         />
       ) : (
-        <FoundCard handleFind={props.handleFind} findNumber={props.findNumber} />
+        <FoundCard
+          handleFind={props.handleFind}
+          findNumber={props.findNumber}
+        />
       )}
     </div>
   );

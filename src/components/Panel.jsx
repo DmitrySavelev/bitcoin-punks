@@ -9,11 +9,23 @@ function Panel(props) {
   }
 
   function handleShowsSubmit() {
-    if (props.isShowIDs) {
-      props.setIsShowIDs(false);
-    } else {
-      props.setIsShowIDs(true);
-    }
+    props.isShowIDs ? props.setIsShowIDs(false) : props.setIsShowIDs(true);
+  }
+
+  function makeRandomCards() {
+    props.setIsSortByRandom(true);
+    props.setIsSortByID(false);
+    props.setIsSortByRecentMint(false);
+  }
+  function makeCardsByID() {
+    props.setIsSortByRandom(false);
+    props.setIsSortByID(true);
+    props.setIsSortByRecentMint(false);
+  }
+  function makeCardsByRecentMint() {
+    props.setIsSortByRandom(false);
+    props.setIsSortByID(false);
+    props.setIsSortByRecentMint(true);
   }
 
   return (
@@ -22,9 +34,28 @@ function Panel(props) {
       <div className={props.isVisible ? "panel-row" : "panel-row_center"}>
         <div>
           <span>Sort by:</span>
-          <button className="btn btn-1">Random</button>
-          <button className="btn btn-2">Apes ID</button>
-          <button className="btn btn-3">Recent Mint</button>
+          <button
+            className={`btn btn-1 ${
+              props.isSortByRandom ? "btn_selected" : ""
+            }`}
+            onClick={makeRandomCards}
+          >
+            Random
+          </button>
+          <button
+            className={`btn btn-2 ${props.isSortByID ? "btn_selected" : ""}`}
+            onClick={makeCardsByID}
+          >
+            Apes ID
+          </button>
+          <button
+            className={`btn btn-3 ${
+              props.isSortByRecentMint ? "btn_selected" : ""
+            }`}
+            onClick={makeCardsByRecentMint}
+          >
+            Recent Mint
+          </button>
         </div>
         <div className={props.isVisible ? "finder" : "finder_hide"}>
           <form>

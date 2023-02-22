@@ -11,7 +11,10 @@ function App() {
   const [currentMinted, setCurrentMinted] = useState(null);
   const [currentHashes, setCurrentHashes] = useState({});
   const [findNumber, setFindNumber] = useState("");
-  const [isShowIDs, setIsShowIDs] = useState(false);
+  const [isShowIDs, setIsShowIDs] = useState(true);
+  const [isSortByRandom, setIsSortByRandom] = useState(true);
+  const [isSortByID, setIsSortByID] = useState(false);
+  const [isSortByRecentMint, setIsSortByRecentMint] = useState(false);
 
   useEffect(() => {
     api
@@ -51,6 +54,12 @@ function App() {
         findNumber={findNumber}
         setIsShowIDs={setIsShowIDs}
         isShowIDs={isShowIDs}
+        isSortByRandom={isSortByRandom}
+        setIsSortByRandom={setIsSortByRandom}
+        isSortByID={isSortByID}
+        setIsSortByID={setIsSortByID}
+        isSortByRecentMint={isSortByRecentMint}
+        setIsSortByRecentMint={setIsSortByRecentMint}
       />
       <InfoPopup
         isOpen={isInfoPopupOpen}
@@ -88,6 +97,3 @@ export default App;
 //   },
 // };
 
-// function handleSwitchVisibility() {
-//   setIsVisible(false);
-// }

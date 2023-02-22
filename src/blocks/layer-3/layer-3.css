@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  display: none;
 }
 .layer-3 a {
   color: #fff;

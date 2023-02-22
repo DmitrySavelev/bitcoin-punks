@@ -26,6 +26,7 @@
 @import url(./blocks/view-punks/view-punks.css);
 @import url(./blocks/btn/btn.css);
 @import url(./blocks/btn-1/btn-1.css);
+@import url(./blocks/btn/_selected/btn_selected.css);
 @import url(./blocks/btn-2/btn-2.css);
 @import url(./blocks/btn-3/btn-3.css);
 @import url(./blocks/finder/finder.css);
@@ -77,3 +78,11 @@
 @import url(./blocks/popup/__figure/_circle/popup__figure_circle.css);
 @import url(./blocks/popup/__figure/_circle/_first/popup__figure_circle_first.css);
 @import url(./blocks/popup/__figure/_vertical-line/popup__figure_vertical-line.css);
+
+.block_2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}

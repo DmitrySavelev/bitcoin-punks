@@ -4,6 +4,16 @@
   bottom: 0;
   right: 0;
   top: 0;
-  /* display: none;  */
 }
 
+.block:hover .layer-1 {
+  display: flex;
+}
+
+.block:hover .layer-2 {
+  display: block;
+}
+
+.block:hover .layer-3 {
+  display: flex;
+}

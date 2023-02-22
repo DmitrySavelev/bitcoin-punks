@@ -1,5 +1,4 @@
 .panel-row_center {
   display: flex;
-  /* justify-content: space-between */
   justify-content: center;
 }

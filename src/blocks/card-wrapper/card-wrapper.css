@@ -1,8 +1,8 @@
 .card-wrapper {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
-.card-wrapper:hover .block {
+/* .card-wrapper:hover .block {
   display: block;
-}
+} */

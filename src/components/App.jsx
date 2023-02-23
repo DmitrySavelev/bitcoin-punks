@@ -10,11 +10,24 @@ function App() {
   const [currentNumber, setCurrentNumber] = useState(null);
   const [currentMinted, setCurrentMinted] = useState(null);
   const [currentHashes, setCurrentHashes] = useState({});
+  const [currentImage, setCurrentImage] = useState("");
   const [findNumber, setFindNumber] = useState("");
   const [isShowIDs, setIsShowIDs] = useState(true);
+
   const [isSortByRandom, setIsSortByRandom] = useState(true);
   const [isSortByID, setIsSortByID] = useState(false);
   const [isSortByRecentMint, setIsSortByRecentMint] = useState(false);
+
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    api
+      .getData()
+      .then((data) => {
+        setCards(Object.entries(data));
+      })
+      .catch((error) => console.log(error));
+  }, []);
 
   useEffect(() => {
     api
@@ -23,6 +36,9 @@ function App() {
         if (currentNumber) {
           setCurrentMinted(data[currentNumber].lowest);
           setCurrentHashes(data[currentNumber].hashes);
+          setCurrentImage(
+            data[currentNumber].hashes[data[currentNumber].lowest]
+          );
         }
       })
       .catch((error) => console.log(error));
@@ -48,6 +64,7 @@ function App() {
         number={setCurrentNumber}
         minted={setCurrentMinted}
         hashes={setCurrentHashes}
+        // image={setCurrentImage}
         handleFind={handleFindByNumber}
         isVisible={isVisible}
         setNumber={setFindNumber}
@@ -60,6 +77,7 @@ function App() {
         setIsSortByID={setIsSortByID}
         isSortByRecentMint={isSortByRecentMint}
         setIsSortByRecentMint={setIsSortByRecentMint}
+        cards={cards}
       />
       <InfoPopup
         isOpen={isInfoPopupOpen}
@@ -67,6 +85,7 @@ function App() {
         number={currentNumber}
         minted={currentMinted}
         hashes={currentHashes}
+        image={currentImage}
       />
     </div>
   );
@@ -96,4 +115,3 @@ export default App;
 //     },
 //   },
 // };
-

@@ -36,6 +36,7 @@ function Main(props) {
           setIsSortByID={props.setIsSortByID}
           isSortByRecentMint={props.isSortByRecentMint}
           setIsSortByRecentMint={props.setIsSortByRecentMint}
+          cards={props.cards}
         />
       ) : (
         <FoundCard

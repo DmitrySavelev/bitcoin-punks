@@ -5,7 +5,7 @@ function InfoPopup(props) {
     <div className={`InfoPopup ${props.isOpen ? "popup_opened" : ""}`}>
       <div className="popup__container-info">
         <div className="popup__row">
-          <span className="popup__number">{props.number}</span>
+          <span className="popup__number">#{props.number}</span>
           <div className="popup__buttons">
             <button className="popup__buttons_report">Report Inaccuracy</button>
             <button className="popup__buttons_close" onClick={props.onClose}>
@@ -14,8 +14,10 @@ function InfoPopup(props) {
           </div>
         </div>
         <div className="popup__content">
-          <img className="popup__image" src="./images/Bapes1.jpg" alt="" />
-
+          <img
+            className="popup__image"
+            src={`https://ordinals.com/content/${props.image}`}
+          />
           <div className="popup__text-info">
             <div className="popup__text-info_minted">
               <div className="popup__figure">
@@ -31,9 +33,11 @@ function InfoPopup(props) {
               </div>
             </div>
 
-            {Object.keys(props.hashes).slice(1).map((num) => (
-              <Missed number={num} />
-            ))}
+            {Object.keys(props.hashes)
+              .slice(1)
+              .map((num) => (
+                <Missed number={num} />
+              ))}
 
             <div className="popup__text-info_end">
               <div className="popup__figure">

@@ -54,7 +54,7 @@ function App() {
       setCurrentNumber(null);
     }
   }
-  
+    
   function handleFindByNumber() {
     isVisible ? setIsVisible(false) : setIsVisible(true);
   }

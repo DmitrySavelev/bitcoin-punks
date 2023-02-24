@@ -1,0 +1,7 @@
+.go_disabled {
+  background-color: red;
+  cursor: default;
+}
+.go_disabled:hover {
+  background-color: red;
+}

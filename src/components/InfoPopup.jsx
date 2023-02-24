@@ -1,6 +1,8 @@
 import Missed from "./Missed";
-
 function InfoPopup(props) {
+  function handleOpenInscription(src) {
+    window.open(`https://ordinals.com/inscription/${src}`, "_blank");
+  }
   return (
     <div className={`InfoPopup ${props.isOpen ? "popup_opened" : ""}`}>
       <div className="popup__container-info">
@@ -16,9 +18,7 @@ function InfoPopup(props) {
         <div className="popup__content">
           <img
             className="popup__image"
-            src={
-              props.image ? `https://ordinals.com/content/${props.image}` : ""
-            }
+            src={props.src ? `https://ordinals.com/content/${props.src}` : ""}
           />
           <div className="popup__text-info">
             <div className="popup__text-info_minted">
@@ -28,19 +28,27 @@ function InfoPopup(props) {
               </div>
               <div className="popup__text_value">
                 <span className="white">Minted</span>
-                <a className="popup__view-minted">View inscription #{props.minted}</a>
+                <a
+                  onClick={() => handleOpenInscription(props.src)}
+                  className="popup__view-minted"
+                >
+                  View inscription #{props.minted}
+                </a>
                 <span className="small">
                   The first byte-perfect upload of this punk
                 </span>
               </div>
             </div>
-
             {Object.keys(props.hashes)
               .slice(1)
               .map((num) => (
-                <Missed key={num} number={num} />
+                <Missed
+                  key={num}
+                  number={num}
+                  handleOpenInscription={handleOpenInscription}
+                  src={props.hashes[num]}
+                />
               ))}
-
             <div className="popup__text-info_end">
               <div className="popup__figure">
                 <div className="popup__figure_circle"></div>

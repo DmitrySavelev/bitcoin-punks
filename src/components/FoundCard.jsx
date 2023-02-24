@@ -11,11 +11,14 @@ function FoundCard({
   isVisible,
   isShowIDs,
 }) {
+  const formattedNumber = String(currentNumber).padStart(4, "0");
   return (
     <div className="found-card">
       <Card
         src={
-          cardsObject[currentNumber].hashes[cardsObject[currentNumber].lowest]
+          cardsObject[formattedNumber].hashes[
+            cardsObject[formattedNumber].lowest
+          ]
         }
         currentNumber={currentNumber}
         onInfo={onInfo}

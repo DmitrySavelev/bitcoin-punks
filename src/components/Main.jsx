@@ -12,6 +12,7 @@ function Main(props) {
       <Panel
         handleFind={props.handleFind}
         isVisible={props.isVisible}
+        currentNumber={props.currentNumber}
         setCurrentNumber={props.setCurrentNumber}
         setIsShowIDs={props.setIsShowIDs}
         isShowIDs={props.isShowIDs}
@@ -21,6 +22,7 @@ function Main(props) {
         setIsSortByID={props.setIsSortByID}
         isSortByRecentMint={props.isSortByRecentMint}
         setIsSortByRecentMint={props.setIsSortByRecentMint}
+        cards={props.cards}
       />
       {props.isVisible ? (
         <Cards

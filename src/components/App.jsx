@@ -12,7 +12,7 @@ function App() {
   const [currentNumber, setCurrentNumber] = useState(null);
   const [currentMinted, setCurrentMinted] = useState(null);
   const [currentHashes, setCurrentHashes] = useState({});
-  const [currentImage, setCurrentImage] = useState("");
+  const [currentSrc, setCurrentSrc] = useState("");
   const [isShowIDs, setIsShowIDs] = useState(true);
 
   const [isSortByRandom, setIsSortByRandom] = useState(true);
@@ -29,12 +29,13 @@ function App() {
   function handlePagination() {
     setPagination(pagination + 250);
   }
-
   useEffect(() => {
     setIsLoading(true);
     api
       .getData()
       .then((data) => {
+        console.log(data['0001'])
+        // console.log(Object.entries(data));
         setRandomCards(makeRandomArr(Object.entries(data)));
         setCards(Object.entries(data));
         setCardsObject(data);
@@ -52,9 +53,7 @@ function App() {
         if (currentNumber) {
           setCurrentMinted(data[currentNumber].lowest);
           setCurrentHashes(data[currentNumber].hashes);
-          setCurrentImage(
-            data[currentNumber].hashes[data[currentNumber].lowest]
-          );
+          setCurrentSrc(data[currentNumber].hashes[data[currentNumber].lowest]);
         }
       })
       .catch((error) => console.log(error));
@@ -107,7 +106,7 @@ function App() {
         currentNumber={currentNumber}
         minted={currentMinted}
         hashes={currentHashes}
-        image={currentImage}
+        src={currentSrc}
         isVisible={isVisible}
       />
     </div>

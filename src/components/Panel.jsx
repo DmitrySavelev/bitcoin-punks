@@ -1,8 +1,15 @@
+import { useRef } from "react";
+
 function Panel(props) {
+  // const inputRef = useRef();
+
   function handleChangeName(e) {
     props.setCurrentNumber(e.target.value);
+    console.log(e.target.value);
+    // if (e.key === "Enter") {
+    //   console.log("enter");
+    // }
   }
-
   function handleFindSubmit(e) {
     e.preventDefault();
     props.handleFind();
@@ -70,12 +77,29 @@ function Panel(props) {
           </form>
           <form onSubmit={handleFindSubmit}>
             <input
-              className="input-find"
+              // ref={inputRef}
+              className={`input-find ${
+                props.cards && props.currentNumber > props.cards.length
+                  ? "input-find_limit"
+                  : ""
+              }`}
               type="text"
               placeholder="Find Apes ID"
               onChange={handleChangeName}
             />
-            <button className="go" type="submit">
+            <button
+              className={`go ${
+                props.cards && props.currentNumber > props.cards.length
+                  ? "go_disabled"
+                  : ""
+              }`}
+              type="submit"
+              disabled={
+                props.cards && props.currentNumber > props.cards.length
+                  ? true
+                  : false
+              }
+            >
               Go
             </button>
           </form>

@@ -3,7 +3,6 @@ class Api {
     if (res.ok) {
       return res.json();
     }
-    // throw new Error('ошибка');
   }
 
   getData() {

@@ -32,7 +32,9 @@
 @import url(./blocks/finder/finder.css);
 @import url(./blocks/finder/_hide/finder_hide.css);
 @import url(./blocks/go/go.css);
+@import url(./blocks/go_disabled/go_disabled.css);
 @import url(./blocks/input-find/input-find.css);
+@import url(./blocks/input-find_limit/input-find_limit.css);
 @import url(./blocks/showsIDs/showsIDs.css);
 @import url(./blocks/info-image/info-image.css);
 

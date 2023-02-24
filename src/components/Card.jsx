@@ -1,22 +1,22 @@
 function Card(props) {
-  const handleClick = () => {
-    props.number(+`${String(props.id).padStart(4, "0")}`);
+  function handleOpenImage(e) {
+    e.preventDefault();
+    const src = `https://cryptopunks.app/cryptopunks/cryptopunk${props.id}.png?size=400&customColor=F7931A`;
+    window
+      .open("about:blank", "new image")
+      .document.write(
+        "<img class='image-open' src='" +
+          src +
+          "' style='margin:100px 400px' />"
+      );
+  }
+
+  function handleInfoClick() {
     props.onInfo();
-  };
-
-
-// для добавления картинки в другой вкладке
-// для добавления картинки в другой вкладке
-// для добавления картинки в другой вкладке
-// для добавления картинки в другой вкладке
-  const img = document.getElementById("vzhuh"); // берем картинку по id
-const src = img.src; // берем ее src
-img.addEventListener('click', () => {
-  const win = window.open('about:blank', 'new image'); // открываем окно
-  win.document.write("<img src='" + src + "' alt='from old image' />"); //  вставляем картинку
-});
-
-
+    if (props.id) {
+      props.setCurrentNumber(props.id);
+    }
+  }
 
   return (
     <div className="card-wrapper">
@@ -27,16 +27,17 @@ img.addEventListener('click', () => {
       />
       <div className={"block"}>
         <div className={`layer-1 ${props.isShowIDs ? "layer-1_showed" : ""}`}>
-          {props.isVisible == undefined ? (
-            <span>#{String(props.findNumber).padStart(4, "0")}</span>
-          ) : (
+          {props.isVisible ? (
             <span>#{String(props.id).padStart(4, "0")}</span>
+          ) : (
+            <span>#{String(props.currentNumber).padStart(4, "0")}</span>
+            // <span>#{String(props.findNumber).padStart(4, "0")}</span>
           )}
         </div>
         <div className="layer-2"></div>
         <div className={`layer-3 ${props.isShowIDs ? "layer-3_showed" : ""}`}>
-          <a onClick={handleClick}>ORDS</a>
-          <a>PFP</a>
+          <a onClick={handleInfoClick}>ORDS</a>
+          <a onClick={handleOpenImage}>PFP</a>
         </div>
       </div>
     </div>

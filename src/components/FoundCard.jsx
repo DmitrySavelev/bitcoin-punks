@@ -1,122 +1,37 @@
 import Card from "./Card";
 
-const data = [
-  { id: 1000, src: "./images/Bapes1.jpg" },
-  { id: 9948, src: "./images/Bapes2.jpg" },
-  { id: 1002, src: "./images/Bapes3.jpg" },
-  { id: 1003, src: "./images/Bapes4.jpg" },
-  { id: 1004, src: "./images/Bapes5.jpg" },
-  { id: 1005, src: "./images/Bapes6.jpg" },
-  { id: 1006, src: "./images/Bapes6.jpg" },
-  { id: 1007, src: "./images/Bapes6.jpg" },
-  { id: 1008, src: "./images/Bapes6.jpg" },
-  { id: 1009, src: "./images/Bapes6.jpg" },
-  { id: 1010, src: "./images/Bapes1.jpg" },
-  { id: 1011, src: "./images/Bapes2.jpg" },
-  { id: 1012, src: "./images/Bapes3.jpg" },
-  { id: 14, src: "./images/Bapes4.jpg" },
-  { id: 15, src: "./images/Bapes5.jpg" },
-  { id: 16, src: "./images/Bapes6.jpg" },
-  { id: 17, src: "./images/Bapes6.jpg" },
-  { id: 18, src: "./images/Bapes6.jpg" },
-  { id: 19, src: "./images/Bapes6.jpg" },
-  { id: 20, src: "./images/Bapes6.jpg" },
-  { id: 21, src: "./images/Bapes1.jpg" },
-  { id: 22, src: "./images/Bapes2.jpg" },
-  { id: 23, src: "./images/Bapes3.jpg" },
-  { id: 24, src: "./images/Bapes4.jpg" },
-  { id: 25, src: "./images/Bapes5.jpg" },
-  { id: 26, src: "./images/Bapes6.jpg" },
-  { id: 27, src: "./images/Bapes6.jpg" },
-  { id: 28, src: "./images/Bapes6.jpg" },
-  { id: 29, src: "./images/Bapes6.jpg" },
-  { id: 30, src: "./images/Bapes6.jpg" },
-  { id: 31, src: "./images/Bapes1.jpg" },
-  { id: 32, src: "./images/Bapes2.jpg" },
-  { id: 33, src: "./images/Bapes3.jpg" },
-  { id: 34, src: "./images/Bapes4.jpg" },
-  { id: 35, src: "./images/Bapes5.jpg" },
-  { id: 36, src: "./images/Bapes6.jpg" },
-  { id: 37, src: "./images/Bapes6.jpg" },
-  { id: 38, src: "./images/Bapes6.jpg" },
-  { id: 39, src: "./images/Bapes6.jpg" },
-  { id: 40, src: "./images/Bapes6.jpg" },
-  { id: 41, src: "./images/Bapes1.jpg" },
-  { id: 42, src: "./images/Bapes2.jpg" },
-  { id: 43, src: "./images/Bapes3.jpg" },
-  { id: 44, src: "./images/Bapes4.jpg" },
-  { id: 45, src: "./images/Bapes5.jpg" },
-  { id: 46, src: "./images/Bapes6.jpg" },
-  { id: 47, src: "./images/Bapes6.jpg" },
-  { id: 48, src: "./images/Bapes6.jpg" },
-  { id: 49, src: "./images/Bapes6.jpg" },
-  { id: 50, src: "./images/Bapes6.jpg" },
-  { id: 51, src: "./images/Bapes1.jpg" },
-  { id: 52, src: "./images/Bapes2.jpg" },
-  { id: 53, src: "./images/Bapes3.jpg" },
-  { id: 54, src: "./images/Bapes4.jpg" },
-  { id: 55, src: "./images/Bapes5.jpg" },
-  { id: 56, src: "./images/Bapes6.jpg" },
-  { id: 57, src: "./images/Bapes6.jpg" },
-  { id: 58, src: "./images/Bapes6.jpg" },
-  { id: 59, src: "./images/Bapes6.jpg" },
-  { id: 60, src: "./images/Bapes6.jpg" },
-  { id: 61, src: "./images/Bapes1.jpg" },
-  { id: 62, src: "./images/Bapes2.jpg" },
-  { id: 63, src: "./images/Bapes3.jpg" },
-  { id: 64, src: "./images/Bapes4.jpg" },
-  { id: 65, src: "./images/Bapes5.jpg" },
-  { id: 66, src: "./images/Bapes6.jpg" },
-  { id: 67, src: "./images/Bapes6.jpg" },
-  { id: 68, src: "./images/Bapes6.jpg" },
-  { id: 69, src: "./images/Bapes6.jpg" },
-  { id: 70, src: "./images/Bapes6.jpg" },
-  { id: 71, src: "./images/Bapes1.jpg" },
-  { id: 72, src: "./images/Bapes2.jpg" },
-  { id: 73, src: "./images/Bapes3.jpg" },
-  { id: 74, src: "./images/Bapes4.jpg" },
-  { id: 75, src: "./images/Bapes5.jpg" },
-  { id: 76, src: "./images/Bapes6.jpg" },
-  { id: 77, src: "./images/Bapes6.jpg" },
-  { id: 78, src: "./images/Bapes6.jpg" },
-  { id: 79, src: "./images/Bapes6.jpg" },
-  { id: 80, src: "./images/Bapes6.jpg" },
-  { id: 81, src: "./images/Bapes1.jpg" },
-  { id: 82, src: "./images/Bapes2.jpg" },
-  { id: 83, src: "./images/Bapes3.jpg" },
-  { id: 84, src: "./images/Bapes4.jpg" },
-  { id: 85, src: "./images/Bapes5.jpg" },
-  { id: 86, src: "./images/Bapes6.jpg" },
-  { id: 87, src: "./images/Bapes6.jpg" },
-  { id: 88, src: "./images/Bapes6.jpg" },
-  { id: 89, src: "./images/Bapes6.jpg" },
-  { id: 90, src: "./images/Bapes6.jpg" },
-  { id: 91, src: "./images/Bapes1.jpg" },
-  { id: 92, src: "./images/Bapes2.jpg" },
-  { id: 93, src: "./images/Bapes3.jpg" },
-  { id: 94, src: "./images/Bapes4.jpg" },
-  { id: 95, src: "./images/Bapes5.jpg" },
-  { id: 96, src: "./images/Bapes6.jpg" },
-  { id: 97, src: "./images/Bapes6.jpg" },
-  { id: 98, src: "./images/Bapes6.jpg" },
-  { id: 99, src: "./images/Bapes6.jpg" },
-  { id: 100, src: "./images/Bapes6.jpg" },
-];
+function FoundCard({
+  cardsObject,
+  // findNumber,
+  currentNumber,
+  handleFind,
+  onInfo,
+  number,
+  minted,
+  hashes,
+  isVisible,
+  isShowIDs,
+}) {
 
-function FoundCard(props) {
   return (
     <div className="found-card">
       <Card
-        key={data[0].id}
-        src={data[0].src}
-        findNumber={props.findNumber}
-        // id={card.id}
-        // onInfo={props.onInfo}
-        // number={props.number}
-        // minted={props.minted}
-        // hashes={props.hashes}
+        src={
+          cardsObject[currentNumber].hashes[cardsObject[currentNumber].lowest]
+        }
+        // src={cardsObject[findNumber].hashes[cardsObject[findNumber].lowest]}
+        // findNumber={findNumber}
+        currentNumber={currentNumber}
+        onInfo={onInfo}
+        number={number}
+        minted={minted}
+        hashes={hashes}
+        isVisible={isVisible}
+        isShowIDs={isShowIDs}
       />
-      <button className="found-card__button" onClick={props.handleFind}>Clear Filter</button>
+      <button className="found-card__button" onClick={handleFind}>
+        Clear Filter
+      </button>
     </div>
   );
 }

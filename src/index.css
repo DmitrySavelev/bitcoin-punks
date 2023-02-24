@@ -86,3 +86,8 @@
   right: 0;
   top: 0;
 }
+
+.image-open {
+  margin: 50px auto;
+  background-color: black;
+}

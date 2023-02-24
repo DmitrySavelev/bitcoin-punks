@@ -1,10 +1,9 @@
 import Card from "./Card";
-import { makeRandomArr } from "../utils/constants";
 
 function Cards(props) {
   function handleChangeOrder(cards) {
     if (props.isSortByRandom) {
-      return makeRandomArr(cards);
+      return props.randomCards;
     } else if (props.isSortByID) {
       return cards;
     } else if (props.isSortByRecentMint) {
@@ -17,18 +16,22 @@ function Cards(props) {
       <div className={props.isVisible ? "Cards" : "Cards_clean"}>
         <div className="Cards-wrapper">
           {handleChangeOrder(props.cards)
-            .slice(0, 100)
+            .slice(0, 15)
             .map((card) => (
               <Card
                 key={card[0]}
                 src={card[1].hashes[card[1].lowest]}
                 id={card[0]}
                 onInfo={props.onInfo}
-                number={props.number}
+                setCurrentNumber={props.setCurrentNumber}
                 minted={props.minted}
                 hashes={props.hashes}
                 isVisible={props.isVisible}
                 isShowIDs={props.isShowIDs}
+                handleClickORDS={props.handleClickORDS}
+                setId={props.setId}
+                // findNumber={props.findNumber}
+                currentNumber={props.currentNumber}
               />
             ))}
         </div>

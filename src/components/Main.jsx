@@ -12,7 +12,9 @@ function Main(props) {
       <Panel
         handleFind={props.handleFind}
         isVisible={props.isVisible}
-        setNumber={props.setNumber}
+        // setFindNumber={props.setFindNumber}
+        setCurrentNumber={props.setCurrentNumber}
+
         setIsShowIDs={props.setIsShowIDs}
         isShowIDs={props.isShowIDs}
         isSortByRandom={props.isSortByRandom}
@@ -24,8 +26,9 @@ function Main(props) {
       />
       {props.isVisible ? (
         <Cards
+          setId={props.setId}
           onInfo={props.onInfo}
-          number={props.number}
+          setCurrentNumber={props.setCurrentNumber}
           minted={props.minted}
           hashes={props.hashes}
           isVisible={props.isVisible}
@@ -37,11 +40,21 @@ function Main(props) {
           isSortByRecentMint={props.isSortByRecentMint}
           setIsSortByRecentMint={props.setIsSortByRecentMint}
           cards={props.cards}
+          randomCards={props.randomCards}
         />
       ) : (
         <FoundCard
           handleFind={props.handleFind}
-          findNumber={props.findNumber}
+          // findNumber={props.findNumber}
+          cards={props.cards}
+          cardsObject={props.cardsObject}
+          onInfo={props.onInfo}
+          number={props.number}
+          minted={props.minted}
+          hashes={props.hashes}
+          isVisible={props.isVisible}
+          isShowIDs={props.isShowIDs}
+          currentNumber={props.currentNumber}
         />
       )}
     </div>

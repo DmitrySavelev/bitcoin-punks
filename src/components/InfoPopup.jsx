@@ -5,7 +5,9 @@ function InfoPopup(props) {
     <div className={`InfoPopup ${props.isOpen ? "popup_opened" : ""}`}>
       <div className="popup__container-info">
         <div className="popup__row">
-          <span className="popup__number">#{props.number}</span>
+          <span className="popup__number">
+            #{ props.currentNumber}
+          </span>
           <div className="popup__buttons">
             <button className="popup__buttons_report">Report Inaccuracy</button>
             <button className="popup__buttons_close" onClick={props.onClose}>
@@ -36,7 +38,7 @@ function InfoPopup(props) {
             {Object.keys(props.hashes)
               .slice(1)
               .map((num) => (
-                <Missed number={num} />
+                <Missed key={num} number={num} />
               ))}
 
             <div className="popup__text-info_end">

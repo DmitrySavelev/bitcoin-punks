@@ -1,6 +1,8 @@
 function Panel(props) {
   function handleChangeName(e) {
-    props.setNumber(e.target.value);
+    // props.setFindNumber(e.target.value);
+    props.setCurrentNumber(e.target.value)
+    
   }
 
   function handleFindSubmit(e) {

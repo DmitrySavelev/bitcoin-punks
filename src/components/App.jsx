@@ -4,6 +4,7 @@ import InfoPopup from "./InfoPopup";
 import Main from "./Main";
 import { api } from "../utils/Api";
 import { makeRandomArr } from "../utils/constants";
+import React from "react";
 
 function App() {
   const [isInfoPopupOpen, setIsInfoPopupOpen] = useState(false);
@@ -22,7 +23,15 @@ function App() {
   const [randomCards, setRandomCards] = useState([]);
   const [cardsObject, setCardsObject] = useState([]);
 
+  const [pagination, setPagination] = useState(250);
+  const [isLoading, setIsLoading] = useState(false);
+
+  function handlePagination() {
+    setPagination(pagination + 250);
+  }
+
   useEffect(() => {
+    setIsLoading(true);
     api
       .getData()
       .then((data) => {
@@ -30,7 +39,10 @@ function App() {
         setCards(Object.entries(data));
         setCardsObject(data);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error))
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -54,7 +66,7 @@ function App() {
       setCurrentNumber(null);
     }
   }
-    
+
   function handleFindByNumber() {
     isVisible ? setIsVisible(false) : setIsVisible(true);
   }
@@ -73,8 +85,6 @@ function App() {
         hashes={setCurrentHashes}
         handleFind={handleFindByNumber}
         isVisible={isVisible}
-        // setFindNumber={setFindNumber}
-        // findNumber={findNumber}
         currentNumber={currentNumber}
         setIsShowIDs={setIsShowIDs}
         isShowIDs={isShowIDs}
@@ -87,6 +97,9 @@ function App() {
         cards={cards}
         randomCards={randomCards}
         cardsObject={cardsObject}
+        pagination={pagination}
+        handlePagination={handlePagination}
+        isLoading={isLoading}
       />
       <InfoPopup
         isOpen={isInfoPopupOpen}
@@ -95,7 +108,6 @@ function App() {
         minted={currentMinted}
         hashes={currentHashes}
         image={currentImage}
-        // findNumber={findNumber}
         isVisible={isVisible}
       />
     </div>

@@ -1,7 +1,9 @@
 function Card(props) {
   function handleOpenImage(e) {
     e.preventDefault();
-    const src = `https://cryptopunks.app/cryptopunks/cryptopunk${props.id}.png?size=400&customColor=F7931A`;
+    const src = `https://cryptopunks.app/cryptopunks/cryptopunk${
+      props.id ? props.id : props.currentNumber
+    }.png?size=400&customColor=F7931A`;
     window
       .open("about:blank", "new image")
       .document.write(
@@ -31,7 +33,6 @@ function Card(props) {
             <span>#{String(props.id).padStart(4, "0")}</span>
           ) : (
             <span>#{String(props.currentNumber).padStart(4, "0")}</span>
-            // <span>#{String(props.findNumber).padStart(4, "0")}</span>
           )}
         </div>
         <div className="layer-2"></div>

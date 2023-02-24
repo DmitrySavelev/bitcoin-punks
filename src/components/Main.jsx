@@ -12,9 +12,7 @@ function Main(props) {
       <Panel
         handleFind={props.handleFind}
         isVisible={props.isVisible}
-        // setFindNumber={props.setFindNumber}
         setCurrentNumber={props.setCurrentNumber}
-
         setIsShowIDs={props.setIsShowIDs}
         isShowIDs={props.isShowIDs}
         isSortByRandom={props.isSortByRandom}
@@ -41,11 +39,13 @@ function Main(props) {
           setIsSortByRecentMint={props.setIsSortByRecentMint}
           cards={props.cards}
           randomCards={props.randomCards}
+          pagination={props.pagination}
+          handlePagination={props.handlePagination}
+          isLoading={props.isLoading}
         />
       ) : (
         <FoundCard
           handleFind={props.handleFind}
-          // findNumber={props.findNumber}
           cards={props.cards}
           cardsObject={props.cardsObject}
           onInfo={props.onInfo}

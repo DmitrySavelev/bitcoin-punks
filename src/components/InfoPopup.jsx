@@ -5,9 +5,7 @@ function InfoPopup(props) {
     <div className={`InfoPopup ${props.isOpen ? "popup_opened" : ""}`}>
       <div className="popup__container-info">
         <div className="popup__row">
-          <span className="popup__number">
-            #{ props.currentNumber}
-          </span>
+          <span className="popup__number">#{props.currentNumber}</span>
           <div className="popup__buttons">
             <button className="popup__buttons_report">Report Inaccuracy</button>
             <button className="popup__buttons_close" onClick={props.onClose}>
@@ -18,7 +16,9 @@ function InfoPopup(props) {
         <div className="popup__content">
           <img
             className="popup__image"
-            src={`https://ordinals.com/content/${props.image}`}
+            src={
+              props.image ? `https://ordinals.com/content/${props.image}` : ""
+            }
           />
           <div className="popup__text-info">
             <div className="popup__text-info_minted">
@@ -28,7 +28,7 @@ function InfoPopup(props) {
               </div>
               <div className="popup__text_value">
                 <span className="white">Minted</span>
-                <span>View inscription #{props.minted}</span>
+                <a className="popup__view-minted">View inscription #{props.minted}</a>
                 <span className="small">
                   The first byte-perfect upload of this punk
                 </span>

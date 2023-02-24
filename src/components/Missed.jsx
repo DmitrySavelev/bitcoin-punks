@@ -7,7 +7,7 @@ function Missed(props) {
       </div>
       <div className="popup__text_value">
         <span>Minted</span>
-        <span>View inscription #{props.number}</span>
+        <a className="popup__view-missed">View inscription #{props.number}</a>
         <span className="small">
           This appeared after the original upload of this punk.
         </span>

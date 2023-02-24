@@ -41,6 +41,7 @@
 @import url(./blocks/_clean/Cards_clean.css);
 @import url(./blocks/Cards-wrapper/Cards-wrapper.css);
 @import url(./blocks/card/card.css);
+@import url(./blocks/loading/loading.css);
 @import url(./blocks/load-cards/load-cards.css);
 
 /* FoundCard */
@@ -73,21 +74,11 @@
 @import url(./blocks/popup/__text-info/_minted/popup__text-info_minted.css);
 @import url(./blocks/popup/__text-info/_value/popup__text-info_value.css);
 @import url(./blocks/popup/__text-info/_missed/popup__text-info_missed.css);
+@import url(./blocks/popup/__view-missed/popup__view-missed.css);
+@import url(./blocks/popup/__view-minted/popup__view-minted.css);
+
 @import url(./blocks/popup/__text-info/_end/popup__text-info_end.css);
 @import url(./blocks/popup/__figure/popup__figure.css);
 @import url(./blocks/popup/__figure/_circle/popup__figure_circle.css);
 @import url(./blocks/popup/__figure/_circle/_first/popup__figure_circle_first.css);
 @import url(./blocks/popup/__figure/_vertical-line/popup__figure_vertical-line.css);
-
-.block_2 {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-}
-
-.image-open {
-  margin: 50px auto;
-  background-color: black;
-}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import InfoPopup from "./InfoPopup";
 import Main from "./Main";
@@ -34,8 +34,6 @@ function App() {
     api
       .getData()
       .then((data) => {
-        console.log(data['0001'])
-        // console.log(Object.entries(data));
         setRandomCards(makeRandomArr(Object.entries(data)));
         setCards(Object.entries(data));
         setCardsObject(data);
@@ -64,6 +62,23 @@ function App() {
     if (isVisible) {
       setCurrentNumber(null);
     }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closePopup();
+      }
+    });
+  });
+
+  function closeOnOverlayClick(e) {
+    if (e.target === e.currentTarget) {
+      closePopup();
+    }
+    // if (e.target === e.currentTarget) {
+    //   closePopup();
+    // }
   }
 
   function handleFindByNumber() {
@@ -108,6 +123,7 @@ function App() {
         hashes={currentHashes}
         src={currentSrc}
         isVisible={isVisible}
+        onOverlayClose={closeOnOverlayClick}
       />
     </div>
   );

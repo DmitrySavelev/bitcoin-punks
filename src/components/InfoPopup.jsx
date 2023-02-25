@@ -1,10 +1,15 @@
 import Missed from "./Missed";
+
 function InfoPopup(props) {
   function handleOpenInscription(src) {
     window.open(`https://ordinals.com/inscription/${src}`, "_blank");
   }
+
   return (
-    <div className={`InfoPopup ${props.isOpen ? "popup_opened" : ""}`}>
+    <div
+      className={`InfoPopup ${props.isOpen ? "popup_opened" : ""}`}
+      onClick={props.onOverlayClose}
+    >
       <div className="popup__container-info">
         <div className="popup__row">
           <span className="popup__number">#{props.currentNumber}</span>

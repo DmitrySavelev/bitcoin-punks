@@ -1,14 +1,7 @@
-import { useRef } from "react";
-
 function Panel(props) {
-  // const inputRef = useRef();
-
   function handleChangeName(e) {
     props.setCurrentNumber(e.target.value);
     console.log(e.target.value);
-    // if (e.key === "Enter") {
-    //   console.log("enter");
-    // }
   }
   function handleFindSubmit(e) {
     e.preventDefault();
@@ -34,7 +27,12 @@ function Panel(props) {
     props.setIsSortByID(false);
     props.setIsSortByRecentMint(true);
   }
+function handler(e) {
 
+  if (e.code === 'KeyZ') {
+    console.log('if')
+  }
+}
   return (
     <div className="Panel">
       <button className="view-punks">View your Apes</button>
@@ -77,7 +75,6 @@ function Panel(props) {
           </form>
           <form onSubmit={handleFindSubmit}>
             <input
-              // ref={inputRef}
               className={`input-find ${
                 props.cards && props.currentNumber > props.cards.length
                   ? "input-find_limit"

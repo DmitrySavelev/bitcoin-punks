@@ -1,7 +1,7 @@
 function Panel(props) {
   function handleChangeName(e) {
+    e.preventDefault();
     props.setCurrentNumber(e.target.value);
-    console.log(e.target.value);
   }
   function handleFindSubmit(e) {
     e.preventDefault();
@@ -27,12 +27,7 @@ function Panel(props) {
     props.setIsSortByID(false);
     props.setIsSortByRecentMint(true);
   }
-function handler(e) {
 
-  if (e.code === 'KeyZ') {
-    console.log('if')
-  }
-}
   return (
     <div className="Panel">
       <button className="view-punks">View your Apes</button>

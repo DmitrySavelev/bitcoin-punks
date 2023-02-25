@@ -66,19 +66,12 @@ function App() {
 
   useEffect(() => {
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        closePopup();
-      }
+      e.key === "Escape" && closePopup();
     });
   });
 
   function closeOnOverlayClick(e) {
-    if (e.target === e.currentTarget) {
-      closePopup();
-    }
-    // if (e.target === e.currentTarget) {
-    //   closePopup();
-    // }
+    e.target === e.currentTarget && closePopup();
   }
 
   function handleFindByNumber() {

@@ -70,6 +70,9 @@ function Panel(props) {
           </form>
           <form onSubmit={handleFindSubmit}>
             <input
+              onKeyUp={(e) =>
+                (e.target.value = e.target.value.replace(/[^\d]/g, ""))
+              }
               className={`input-find ${
                 props.cards && props.currentNumber > props.cards.length
                   ? "input-find_limit"

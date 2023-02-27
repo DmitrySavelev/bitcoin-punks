@@ -4,6 +4,9 @@ function InfoPopup(props) {
   function handleOpenInscription(src) {
     window.open(`https://ordinals.com/inscription/${src}`, "_blank");
   }
+  function handleOpenReport() {
+    window.open("https://discord.com/invite/RzvY6UyEes", "_blank");
+  }
 
   return (
     <div
@@ -14,7 +17,12 @@ function InfoPopup(props) {
         <div className="popup__row">
           <span className="popup__number">#{props.currentNumber}</span>
           <div className="popup__buttons">
-            <button className="popup__buttons_report">Report Inaccuracy</button>
+            <button
+              className="popup__buttons_report"
+              onClick={handleOpenReport}
+            >
+              Report Inaccuracy
+            </button>
             <button className="popup__buttons_close" onClick={props.onClose}>
               Close
             </button>

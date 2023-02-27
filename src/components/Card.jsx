@@ -27,6 +27,7 @@ function Card(props) {
         className="card"
         src={`https://ordinals.com/content/${props.src}`}
       />
+
       <div className={"block"}>
         <div className={`layer-1 ${props.isShowIDs ? "layer-1_showed" : ""}`}>
           {props.isVisible ? (

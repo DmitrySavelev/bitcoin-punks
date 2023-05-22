@@ -1,0 +1,64 @@
+# Query: header
+# ContextLines: 1
+
+20 results - 7 files
+
+package-lock.json:
+   5780          "debug": "2.6.9",
+   5781:         "on-headers": "~1.0.2",
+   5782          "safe-buffer": "5.1.2",
+
+  12303      },
+  12304:     "node_modules/on-headers": {
+  12305        "version": "1.0.2",
+  12306:       "resolved": "https://registry.npmjs.org/on-headers/-/on-headers-1.0.2.tgz",
+  12307        "integrity": "sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==",
+
+src\index.css:
+   4  @import url(./blocks/page/page.css);
+   5: /* header */
+   6: @import url(./blocks/header/header.css);
+   7  @import url(./blocks/title/title.css);
+
+  11  @import url(./blocks/socials/socials.css);
+  12: @import url(./blocks/header-column/header-column.css);
+  13  @import url(./blocks/desc/desc.css);
+
+src\blocks\Header\Header.css:
+  1: .Header {
+  2    width: 600px;
+
+src\blocks\Header\__logo\header__logo.css:
+  1: .header__logo {
+  2    width: 142px;
+
+  8  @media (max-width: 1279px) {
+  9:   .header__logo {
+  10      height: 24.4px;
+
+src\blocks\header-column\header-column.css:
+  1: .header-column {
+  2      display: flex;
+
+src\components\App.jsx:
+   1  import { useEffect, useState } from "react";
+   2: import Header from "./Header";
+   3  import InfoPopup from "./InfoPopup";
+
+  86      <div className="page">
+  87:       <Header />
+  88        <Main
+
+src\components\Header.jsx:
+   1: function Header() {
+   2    function handleOpenMarket() {
+
+   6    return (
+   7:     <div className="Header">
+   8        <div className="logo"></div>
+   9:       <div className="header-column">
+  10          <div className="socials">
+
+  26  
+  27: export default Header;
+  28  

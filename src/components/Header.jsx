@@ -4,7 +4,7 @@ function Header() {
   }
 
   return (
-    <div className="Header">
+    <div className="header">
       <div className="logo"></div>
       <div className="header-column">
         <div className="socials">

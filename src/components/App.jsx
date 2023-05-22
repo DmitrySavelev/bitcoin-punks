@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./Header";
 import InfoPopup from "./InfoPopup";
 import Main from "./Main";

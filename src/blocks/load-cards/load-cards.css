@@ -8,6 +8,7 @@
   border-radius: 4px;
   transition: all 0.3s;
 }
+
 .load-cards:hover {
   background-color: #3F3F3F;
   cursor: pointer;

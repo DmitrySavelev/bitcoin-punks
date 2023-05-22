@@ -1,8 +1,8 @@
-# Проект: Bitcoin-punks
+# Проект: Bitcoin-punk
 
 [Ссылка на github](https://github.com/DmitrySavelev/bitcoin-punks)
 
-### [DEMO](https://dmitrysavelev.github.io/mesto-react/)
+### [DEMO](https://dmitrysavelev.github.io/bitcoin-punks/)
 
 ---
 
@@ -32,6 +32,7 @@
 - Реализовано открытие и закрытие всплывающих окон
 - Валидация поля ввода
 - Реализована пагинация данных
+- Поиск конкретных карточек по номеру
 
 ---
 

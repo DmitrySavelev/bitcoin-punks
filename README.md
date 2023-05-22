@@ -1,4 +1,4 @@
-# Проект: Bitcoin-punkpppp
+# Проект: Bitcoin-punk
 
 [Ссылка на github](https://github.com/DmitrySavelev/bitcoin-punks)
 

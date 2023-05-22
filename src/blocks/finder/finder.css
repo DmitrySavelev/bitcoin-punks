@@ -1,9 +1,0 @@
-.finder {
-  display: flex;
-  align-items: center;
-  color: #d7d7d7;
-}
-
-.finder > form:first-child {
-  display: flex;
-}
